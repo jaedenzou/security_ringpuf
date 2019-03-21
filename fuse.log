@@ -1,23 +1,33 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/zjc19/Desktop/Master files/18632 Assignment/ringpuf_student/ro_isim_beh.exe -prj C:/Users/zjc19/Desktop/Master files/18632 Assignment/ringpuf_student/ro_beh.prj work.ro work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/ro_isim_beh.exe -prj C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/ro_beh.prj work.ro work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/zjc19/Desktop/Master files/18632 Assignment/ringpuf_student/ipcore_dir/VIO.v" into library work
-Analyzing Verilog file "C:/Users/zjc19/Desktop/Master files/18632 Assignment/ringpuf_student/ipcore_dir/ILA.v" into library work
-Analyzing Verilog file "C:/Users/zjc19/Desktop/Master files/18632 Assignment/ringpuf_student/ipcore_dir/ICON.v" into library work
-Analyzing Verilog file "C:/Users/zjc19/Desktop/Master files/18632 Assignment/ringpuf_student/top.v" into library work
+Analyzing Verilog file "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/ringoscillator.v" into library work
+Analyzing Verilog file "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/Mux16.v" into library work
+Analyzing Verilog file "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/ipcore_dir/VIO.v" into library work
+Analyzing Verilog file "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/ipcore_dir/ILA.v" into library work
+Analyzing Verilog file "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/ipcore_dir/ICON.v" into library work
+Analyzing Verilog file "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/counter.v" into library work
+Analyzing Verilog file "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/top.v" into library work
+WARNING:HDLCompiler:329 - "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/top.v" Line 48: Target <counter_enable> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/top.v" Line 52: Target <puf_out> of concurrent assignment or output port connection should be a net type.
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:329 - "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/top.v" Line 48: Target <counter_enable> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/top.v" Line 52: Target <puf_out> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:189 - "C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/top.v" Line 47: Size mismatch in connection of port <out>. Formal port size is 12-bit while actual signal size is 1-bit.
 Completed static elaboration
+Compiling module ringoscillator
+Compiling module Mux16
+Compiling module counter_12
 Compiling module ICON
 Compiling module VIO
 Compiling module ILA
 Compiling module ro
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 5 Verilog Units
-Built simulation executable C:/Users/zjc19/Desktop/Master files/18632 Assignment/ringpuf_student/ro_isim_beh.exe
-Fuse Memory Usage: 27536 KB
+Compiled 8 Verilog Units
+Built simulation executable C:/Users/zjc19/Desktop/Master files/18632 Assignment/security_ringpuf/ro_isim_beh.exe
+Fuse Memory Usage: 28100 KB
 Fuse CPU Usage: 296 ms
