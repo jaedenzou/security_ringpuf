@@ -17,7 +17,7 @@ module ro(clock, puf_out);
 	 
 	 //Counter outputs
 	 wire [11:0] counter1_out, counter2_out, clockcounter_out;
-	 reg counter_enable;
+	 wire counter_enable;
 	 
 //Instantiate your ring oscillators. Do not forget to add (* KEEP = "TRUE" *) before each instantiation
 //Example: (* KEEP = "TRUE" *)   ro_hardmacro ro1(enable, reset, out1);
@@ -45,11 +45,15 @@ Mux16 mux2(select2, {out16,out15,out14,out13,out12,out11,out10,out9,out8,out7,ou
 
 //Write the code for generating your PUF output
 counter_12 co_clk(counterclock_out, enable , clock, 1'b0);
-assign counter_enable = ~(clockcounter_out == 12'b111111111111);
+assign counter_enable = !(clockcounter_out == 12'b111111111111);
 counter_12 co1(counter1_out, counter_enable , mux1_out, reset);
 counter_12 co2(counter2_out, counter_enable , mux2_out, reset);
 
-assign puf_out = (counter1_out>counter2_out) ? 1'b1:1'b0;
+always @ (*)
+begin
+puf_out = (counter1_out>counter2_out) ? 1'b1:1'b0;
+end
+
 	//////////////////////////////////////////////////////////////
 	//ICON, VIO, and ILA instantiations. No need to edit this part
 	 wire [9:0] vio_op;

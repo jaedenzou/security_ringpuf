@@ -6,7 +6,7 @@ input  wire       clk      ,  // clock input
 input  wire       reset       // reset input
 );
 
-always @(posedge clk or negedge reset)
+always @(posedge clk or posedge reset)
 if (reset) begin // active high reset
   out <= 12'b0;
 end else if (enable) begin
