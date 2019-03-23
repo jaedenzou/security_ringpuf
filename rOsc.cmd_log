@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Jamal/OneDrive/Documents/Xilinx ISE Projects/security_ringpuf/rOsc.xst" -ofn "C:/Users/Jamal/OneDrive/Documents/Xilinx ISE Projects/security_ringpuf/rOsc.syr" 
+xst -intstyle ise -ifn "C:/Users/Jamal/OneDrive/Documents/Xilinx ISE Projects/security_ringpuf/rOsc.xst" -ofn "C:/Users/Jamal/OneDrive/Documents/Xilinx ISE Projects/security_ringpuf/rOsc.syr" 

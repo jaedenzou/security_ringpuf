@@ -1,5 +1,0 @@
-verilog work "ipcore_dir/VIO.v"
-verilog work "ipcore_dir/ILA.v"
-verilog work "ipcore_dir/ICON.v"
-verilog work "top.v"
-verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

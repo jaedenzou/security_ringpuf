@@ -1,0 +1,1143 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.77 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.77 secs
+ 
+--> Reading design: ro.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ro.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ro"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Top Module Name                    : ro
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Area
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : NO
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ringoscillator.v" in library work
+Compiling verilog file "Mux16.v" in library work
+Module <ringoscillator> compiled
+Compiling verilog file "ipcore_dir/VIO.v" in library work
+Module <Mux16> compiled
+Compiling verilog file "ipcore_dir/ILA.v" in library work
+Module <VIO> compiled
+Compiling verilog file "ipcore_dir/ICON.v" in library work
+Module <ILA> compiled
+Compiling verilog file "counter.v" in library work
+Module <ICON> compiled
+Compiling verilog file "top.v" in library work
+Module <counter_12> compiled
+Module <ro> compiled
+No errors in compilation
+Analysis of file <"ro.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <ro> in library <work>.
+
+Analyzing hierarchy for module <Mux16> in library <work>.
+
+Analyzing hierarchy for module <counter_12> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <ro>.
+WARNING:Xst:2211 - "ringoscillator.v" line 25: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 26: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 27: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 28: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 29: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 30: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 31: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 32: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 33: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 34: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 35: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 36: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 37: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 38: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 39: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ringoscillator.v" line 40: Instantiating black box module <ringoscillator>.
+WARNING:Xst:2211 - "ipcore_dir/ICON.v" line 74: Instantiating black box module <ICON>.
+WARNING:Xst:2211 - "ipcore_dir/VIO.v" line 77: Instantiating black box module <VIO>.
+WARNING:Xst:2211 - "ipcore_dir/ILA.v" line 81: Instantiating black box module <ILA>.
+Module <ro> is correct for synthesis.
+ 
+    Set user-defined property "KEEP =  TRUE" for instance <ro1> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro2> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro3> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro4> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro5> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro6> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro7> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro8> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro9> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro10> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro11> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro12> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro13> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro14> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro15> in unit <ro>.
+    Set user-defined property "KEEP =  TRUE" for instance <ro16> in unit <ro>.
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <ICON0> in unit <ro>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <ICON0> in unit <ro>.
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <VIO0> in unit <ro>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <VIO0> in unit <ro>.
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <ILA0> in unit <ro>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <ILA0> in unit <ro>.
+Analyzing module <Mux16> in library <work>.
+Module <Mux16> is correct for synthesis.
+ 
+Analyzing module <counter_12> in library <work>.
+Module <counter_12> is correct for synthesis.
+ 
+    Set property "SYN_NOPRUNE = 1" for unit <ICON>.
+    Set property "SYN_NOPRUNE = 1" for unit <VIO>.
+    Set property "SYN_NOPRUNE = 1" for unit <ILA>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Mux16>.
+    Related source file is "Mux16.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux16> synthesized.
+
+
+Synthesizing Unit <counter_12>.
+    Related source file is "counter.v".
+    Found 12-bit up counter for signal <out>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <counter_12> synthesized.
+
+
+Synthesizing Unit <ro>.
+    Related source file is "top.v".
+WARNING:Xst:646 - Signal <counterclock_out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <clockcounter_out> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+    Found 12-bit comparator greater for signal <puf_out$cmp_gt0000> created at line 52.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <ro> synthesized.
+
+WARNING:Xst:524 - All outputs of the instance <co_clk> of the block <counter_12> are unconnected in block <ro>.
+   This instance will be removed from the design along with all underlying logic
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 12-bit up counter                                     : 2
+# Comparators                                          : 1
+ 12-bit comparator greater                             : 1
+# Multiplexers                                         : 2
+ 1-bit 16-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ringoscillator.ngc>.
+Reading core <ipcore_dir/ICON.ngc>.
+Reading core <ipcore_dir/VIO.ngc>.
+Reading core <ipcore_dir/ILA.ngc>.
+Loading core <ringoscillator> for timing and area information for instance <ro1>.
+Loading core <ringoscillator> for timing and area information for instance <ro2>.
+Loading core <ringoscillator> for timing and area information for instance <ro3>.
+Loading core <ringoscillator> for timing and area information for instance <ro4>.
+Loading core <ringoscillator> for timing and area information for instance <ro5>.
+Loading core <ringoscillator> for timing and area information for instance <ro6>.
+Loading core <ringoscillator> for timing and area information for instance <ro7>.
+Loading core <ringoscillator> for timing and area information for instance <ro8>.
+Loading core <ringoscillator> for timing and area information for instance <ro9>.
+Loading core <ringoscillator> for timing and area information for instance <ro10>.
+Loading core <ringoscillator> for timing and area information for instance <ro11>.
+Loading core <ringoscillator> for timing and area information for instance <ro12>.
+Loading core <ringoscillator> for timing and area information for instance <ro13>.
+Loading core <ringoscillator> for timing and area information for instance <ro14>.
+Loading core <ringoscillator> for timing and area information for instance <ro15>.
+Loading core <ringoscillator> for timing and area information for instance <ro16>.
+Loading core <ICON> for timing and area information for instance <ICON0>.
+Loading core <VIO> for timing and area information for instance <VIO0>.
+Loading core <ILA> for timing and area information for instance <ILA0>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 12-bit up counter                                     : 2
+# Comparators                                          : 1
+ 12-bit comparator greater                             : 1
+# Multiplexers                                         : 2
+ 1-bit 16-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit ro1 : the following signal(s) form a combinatorial loop: not_out<3>, not_out<9>, not_out<7>, not_out<6>, not_out<10>, not_out<2>, not_out<4>, not_out<1>, not_out<5>, not_out<8>, not_out<0>.
+WARNING:Xst:2170 - Unit ro2 : the following signal(s) form a combinatorial loop: not_out<8>, not_out<6>, not_out<4>, not_out<0>, not_out<10>, not_out<1>, not_out<7>, not_out<5>, not_out<2>, not_out<3>, not_out<9>.
+WARNING:Xst:2170 - Unit ro3 : the following signal(s) form a combinatorial loop: not_out<1>, not_out<5>, not_out<0>, not_out<7>, not_out<3>, not_out<2>, not_out<6>, not_out<10>, not_out<9>, not_out<4>, not_out<8>.
+WARNING:Xst:2170 - Unit ro4 : the following signal(s) form a combinatorial loop: not_out<5>, not_out<4>, not_out<3>, not_out<10>, not_out<0>, not_out<9>, not_out<7>, not_out<8>, not_out<1>, not_out<6>, not_out<2>.
+WARNING:Xst:2170 - Unit ro5 : the following signal(s) form a combinatorial loop: not_out<10>, not_out<7>, not_out<2>, not_out<8>, not_out<1>, not_out<9>, not_out<4>, not_out<5>, not_out<0>, not_out<3>, not_out<6>.
+WARNING:Xst:2170 - Unit ro6 : the following signal(s) form a combinatorial loop: not_out<5>, not_out<3>, not_out<2>, not_out<10>, not_out<6>, not_out<4>, not_out<9>, not_out<7>, not_out<8>, not_out<1>, not_out<0>.
+WARNING:Xst:2170 - Unit ro7 : the following signal(s) form a combinatorial loop: not_out<9>, not_out<2>, not_out<5>, not_out<10>, not_out<6>, not_out<3>, not_out<8>, not_out<1>, not_out<7>, not_out<0>, not_out<4>.
+WARNING:Xst:2170 - Unit ro8 : the following signal(s) form a combinatorial loop: not_out<1>, not_out<6>, not_out<8>, not_out<4>, not_out<0>, not_out<7>, not_out<3>, not_out<2>, not_out<5>, not_out<9>, not_out<10>.
+WARNING:Xst:2170 - Unit ro9 : the following signal(s) form a combinatorial loop: not_out<6>, not_out<7>, not_out<1>, not_out<2>, not_out<8>, not_out<4>, not_out<3>, not_out<10>, not_out<0>, not_out<9>, not_out<5>.
+WARNING:Xst:2170 - Unit ro10 : the following signal(s) form a combinatorial loop: not_out<5>, not_out<3>, not_out<8>, not_out<9>, not_out<2>, not_out<7>, not_out<0>, not_out<6>, not_out<1>, not_out<10>, not_out<4>.
+WARNING:Xst:2170 - Unit ro11 : the following signal(s) form a combinatorial loop: not_out<4>, not_out<3>, not_out<1>, not_out<6>, not_out<5>, not_out<0>, not_out<7>, not_out<10>, not_out<2>, not_out<8>, not_out<9>.
+WARNING:Xst:2170 - Unit ro12 : the following signal(s) form a combinatorial loop: not_out<8>, not_out<6>, not_out<5>, not_out<1>, not_out<2>, not_out<9>, not_out<10>, not_out<0>, not_out<7>, not_out<4>, not_out<3>.
+WARNING:Xst:2170 - Unit ro13 : the following signal(s) form a combinatorial loop: not_out<6>, not_out<1>, not_out<4>, not_out<2>, not_out<0>, not_out<9>, not_out<7>, not_out<8>, not_out<5>, not_out<10>, not_out<3>.
+WARNING:Xst:2170 - Unit ro14 : the following signal(s) form a combinatorial loop: not_out<0>, not_out<7>, not_out<9>, not_out<1>, not_out<5>, not_out<4>, not_out<10>, not_out<2>, not_out<6>, not_out<3>, not_out<8>.
+WARNING:Xst:2170 - Unit ro15 : the following signal(s) form a combinatorial loop: not_out<10>, not_out<1>, not_out<2>, not_out<8>, not_out<3>, not_out<9>, not_out<5>, not_out<4>, not_out<7>, not_out<0>, not_out<6>.
+WARNING:Xst:2170 - Unit ro16 : the following signal(s) form a combinatorial loop: not_out<2>, not_out<0>, not_out<5>, not_out<10>, not_out<6>, not_out<9>, not_out<4>, not_out<8>, not_out<7>, not_out<3>, not_out<1>.
+
+Optimizing unit <ro> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ro, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ro.ngr
+Top Level Output File Name         : ro
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 2
+
+Cell Usage :
+# BELS                             : 893
+#      GND                         : 11
+#      INV                         : 51
+#      LUT1                        : 258
+#      LUT2                        : 37
+#      LUT3                        : 99
+#      LUT4                        : 140
+#      LUT5                        : 4
+#      LUT6                        : 34
+#      MUXCY                       : 28
+#      MUXCY_L                     : 100
+#      MUXF5                       : 2
+#      MUXF6                       : 1
+#      MUXF7                       : 13
+#      MUXF8                       : 2
+#      VCC                         : 14
+#      XORCY                       : 99
+# FlipFlops/Latches                : 610
+#      FD                          : 38
+#      FDC                         : 1
+#      FDCE                        : 74
+#      FDE                         : 166
+#      FDP                         : 63
+#      FDPE                        : 51
+#      FDR                         : 67
+#      FDRE                        : 133
+#      FDRS                        : 4
+#      FDS                         : 12
+#      LDC                         : 1
+# RAMS                             : 10
+#      RAMB36_EXP                  : 10
+# Shift Registers                  : 88
+#      SRL16                       : 38
+#      SRL16E                      : 1
+#      SRLC16E                     : 11
+#      SRLC32E                     : 38
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 49
+#      IBUF                        : 32
+#      OBUF                        : 17
+# Others                           : 1
+#      BSCAN_VIRTEX5               : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             610  out of  69120     0%  
+ Number of Slice LUTs:                  711  out of  69120     1%  
+    Number used as Logic:               623  out of  69120     0%  
+    Number used as Memory:               88  out of  17920     0%  
+       Number used as SRL:               88
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1089
+   Number with an unused Flip Flop:     479  out of   1089    43%  
+   Number with an unused LUT:           378  out of   1089    34%  
+   Number of fully used LUT-FF pairs:   232  out of   1089    21%  
+   Number of unique control sets:       140
+
+IO Utilization: 
+ Number of IOs:                           2
+ Number of bonded IOBs:                   2  out of    640     0%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               10  out of    148     6%  
+    Number using Block RAM only:         10
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------------------+--------------------------------------------------------------+-------+
+Clock Signal                                                            | Clock buffer(FF name)                                        | Load  |
+------------------------------------------------------------------------+--------------------------------------------------------------+-------+
+ro1/not_out<0>(ro1/not_out_0_not00001:O)                                | NONE(*)(ro1/dffout)                                          | 1     |
+ro2/not_out<0>(ro2/not_out_0_not00001:O)                                | NONE(*)(ro2/dffout)                                          | 1     |
+ro3/not_out<0>(ro3/not_out_0_not00001:O)                                | NONE(*)(ro3/dffout)                                          | 1     |
+ro4/not_out<0>(ro4/not_out_0_not00001:O)                                | NONE(*)(ro4/dffout)                                          | 1     |
+ro5/not_out<0>(ro5/not_out_0_not00001:O)                                | NONE(*)(ro5/dffout)                                          | 1     |
+ro6/not_out<0>(ro6/not_out_0_not00001:O)                                | NONE(*)(ro6/dffout)                                          | 1     |
+ro7/not_out<0>(ro7/not_out_0_not00001:O)                                | NONE(*)(ro7/dffout)                                          | 1     |
+ro8/not_out<0>(ro8/not_out_0_not00001:O)                                | NONE(*)(ro8/dffout)                                          | 1     |
+ro9/not_out<0>(ro9/not_out_0_not00001:O)                                | NONE(*)(ro9/dffout)                                          | 1     |
+ro10/not_out<0>(ro10/not_out_0_not00001:O)                              | NONE(*)(ro10/dffout)                                         | 1     |
+ro11/not_out<0>(ro11/not_out_0_not00001:O)                              | NONE(*)(ro11/dffout)                                         | 1     |
+ro12/not_out<0>(ro12/not_out_0_not00001:O)                              | NONE(*)(ro12/dffout)                                         | 1     |
+ro13/not_out<0>(ro13/not_out_0_not00001:O)                              | NONE(*)(ro13/dffout)                                         | 1     |
+ro14/not_out<0>(ro14/not_out_0_not00001:O)                              | NONE(*)(ro14/dffout)                                         | 1     |
+ro15/not_out<0>(ro15/not_out_0_not00001:O)                              | NONE(*)(ro15/dffout)                                         | 1     |
+ro16/not_out<0>(ro16/not_out_0_not00001:O)                              | NONE(*)(ro16/dffout)                                         | 1     |
+ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                            | BUFG                                                         | 305   |
+ICON0/U0/iUPDATE_OUT                                                    | NONE(ICON0/U0/U_ICON/U_iDATA_CMD)                            | 1     |
+Mcompar_puf_out_cmp_gt0000_cy<5>(Mcompar_puf_out_cmp_gt0000_cy<5>:O)    | NONE(*)(VIO0/U0/I_VIO/GEN_ASYNC_IN[0].ASYNC_IN_CELL/U_RISING)| 2     |
+co1/out_0                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[1].ASYNC_IN_CELL/U_RISING)   | 2     |
+co1/out_1                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[2].ASYNC_IN_CELL/U_RISING)   | 2     |
+co1/out_2                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[3].ASYNC_IN_CELL/U_RISING)   | 2     |
+co1/out_3                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[4].ASYNC_IN_CELL/U_RISING)   | 2     |
+co1/out_4                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[5].ASYNC_IN_CELL/U_RISING)   | 2     |
+co1/out_5                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[6].ASYNC_IN_CELL/U_RISING)   | 2     |
+co1/out_6                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[7].ASYNC_IN_CELL/U_RISING)   | 2     |
+co1/out_7                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[8].ASYNC_IN_CELL/U_RISING)   | 2     |
+co1/out_8                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[9].ASYNC_IN_CELL/U_RISING)   | 2     |
+co1/out_9                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[10].ASYNC_IN_CELL/U_RISING)  | 2     |
+co1/out_10                                                              | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[11].ASYNC_IN_CELL/U_RISING)  | 2     |
+co1/out_11                                                              | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[12].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_0                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[13].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_1                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[14].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_2                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[15].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_3                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[16].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_4                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[17].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_5                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[18].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_6                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[19].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_7                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[20].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_8                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[21].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_9                                                               | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[22].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_10                                                              | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[23].ASYNC_IN_CELL/U_RISING)  | 2     |
+co2/out_11                                                              | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[24].ASYNC_IN_CELL/U_RISING)  | 2     |
+clock                                                                   | BUFGP                                                        | 321   |
+ICON0/CONTROL1<13>(ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE:O)| NONE(*)(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC)            | 1     |
+mux2_out(vio_op<9>1:O)                                                  | NONE(*)(co2/out_0)                                           | 12    |
+mux1_out(vio_op<5>1:O)                                                  | NONE(*)(co1/out_0)                                           | 12    |
+------------------------------------------------------------------------+--------------------------------------------------------------+-------+
+(*) These 20 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                       | Buffer(FF name)                                                                                                                                                                         | Load  |
+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+ILA0/N1(ILA0/XST_VCC:P)                                                                              | NONE(ILA0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)                | 80    |
+ILA0/N0(ILA0/XST_GND:G)                                                                              | NONE(ILA0/U0/I_DQ.G_DW[0].U_DQ)                                                                                                                                                         | 63    |
+VIO0/U0/I_VIO/RESET(VIO0/U0/I_VIO/reset_f_edge/I_H2L.U_DOUT:Q)                                       | NONE(VIO0/U0/I_VIO/GEN_ASYNC_IN[0].ASYNC_IN_CELL/U_FALLING)                                                                                                                             | 50    |
+ICON0/CONTROL1<20>(ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE:O)                             | NONE(ILA0/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V5.U_CS_GANDX_SRL_V5/G_GAND_DLY1[0].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1)| 24    |
+ICON0/CONTROL1<21>(ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_HCE:O)                             | NONE(ILA0/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V5.U_CS_GANDX_SRL_V5/G_GAND_DLY1[0].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1)| 24    |
+ICON0/U0/U_ICON/U_CMD/iSEL_n(ICON0/U0/U_ICON/U_CMD/U_SEL_n:O)                                        | NONE(ICON0/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET)                                                                                                                                 | 10    |
+ILA0/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/iCLR(ILA0/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_CLEAR:O)        | NONE(ILA0/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT0)                                                                                                                                    | 4     |
+ILA0/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/iCLR(ILA0/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_CLEAR:O)      | NONE(ILA0/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0)                                                                                                                                   | 4     |
+ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/iCLR(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_CLEAR:O)              | NONE(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_DOUT0)                                                                                                                                       | 4     |
+ILA0/U0/I_YES_D.U_ILA/iARM(ILA0/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD:Q)             | NONE(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE)                                                                                                                                         | 2     |
+ILA0/U0/I_YES_D.U_ILA/iRESET<1>(ILA0/U0/I_YES_D.U_ILA/U_RST/G_RST[1].U_RST:Q)                        | NONE(ILA0/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG)                                                                                                      | 2     |
+ICON0/CONTROL1<13>(ICON0/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE:O)                             | NONE(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE)                                                                                                                                         | 1     |
+ICON0/U0/U_ICON/iSEL_n(ICON0/U0/U_ICON/U_iSEL_n:O)                                                   | NONE(ICON0/U0/U_ICON/U_iDATA_CMD)                                                                                                                                                       | 1     |
+ILA0/U0/I_YES_D.U_ILA/U_STAT/ACTRESET_pulse(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_RESET_EDGE/I_H2L.U_DOUT:Q)| NONE(ILA0/U0/I_YES_D.U_ILA/U_STAT/U_RISING)                                                                                                                                             | 1     |
+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 6.118ns (Maximum Frequency: 163.452MHz)
+   Minimum input arrival time before clock: 5.336ns
+   Maximum output required time after clock: 5.506ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro1/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro1/dffout (FF)
+  Destination:       ro1/dffout (FF)
+  Source Clock:      ro1/not_out<0> rising
+  Destination Clock: ro1/not_out<0> rising
+
+  Data Path: ro1/dffout to ro1/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro2/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro2/dffout (FF)
+  Destination:       ro2/dffout (FF)
+  Source Clock:      ro2/not_out<0> rising
+  Destination Clock: ro2/not_out<0> rising
+
+  Data Path: ro2/dffout to ro2/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro3/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro3/dffout (FF)
+  Destination:       ro3/dffout (FF)
+  Source Clock:      ro3/not_out<0> rising
+  Destination Clock: ro3/not_out<0> rising
+
+  Data Path: ro3/dffout to ro3/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro4/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro4/dffout (FF)
+  Destination:       ro4/dffout (FF)
+  Source Clock:      ro4/not_out<0> rising
+  Destination Clock: ro4/not_out<0> rising
+
+  Data Path: ro4/dffout to ro4/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro5/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro5/dffout (FF)
+  Destination:       ro5/dffout (FF)
+  Source Clock:      ro5/not_out<0> rising
+  Destination Clock: ro5/not_out<0> rising
+
+  Data Path: ro5/dffout to ro5/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro6/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro6/dffout (FF)
+  Destination:       ro6/dffout (FF)
+  Source Clock:      ro6/not_out<0> rising
+  Destination Clock: ro6/not_out<0> rising
+
+  Data Path: ro6/dffout to ro6/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro7/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro7/dffout (FF)
+  Destination:       ro7/dffout (FF)
+  Source Clock:      ro7/not_out<0> rising
+  Destination Clock: ro7/not_out<0> rising
+
+  Data Path: ro7/dffout to ro7/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro8/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro8/dffout (FF)
+  Destination:       ro8/dffout (FF)
+  Source Clock:      ro8/not_out<0> rising
+  Destination Clock: ro8/not_out<0> rising
+
+  Data Path: ro8/dffout to ro8/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro9/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro9/dffout (FF)
+  Destination:       ro9/dffout (FF)
+  Source Clock:      ro9/not_out<0> rising
+  Destination Clock: ro9/not_out<0> rising
+
+  Data Path: ro9/dffout to ro9/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro10/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro10/dffout (FF)
+  Destination:       ro10/dffout (FF)
+  Source Clock:      ro10/not_out<0> rising
+  Destination Clock: ro10/not_out<0> rising
+
+  Data Path: ro10/dffout to ro10/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro11/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro11/dffout (FF)
+  Destination:       ro11/dffout (FF)
+  Source Clock:      ro11/not_out<0> rising
+  Destination Clock: ro11/not_out<0> rising
+
+  Data Path: ro11/dffout to ro11/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro12/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro12/dffout (FF)
+  Destination:       ro12/dffout (FF)
+  Source Clock:      ro12/not_out<0> rising
+  Destination Clock: ro12/not_out<0> rising
+
+  Data Path: ro12/dffout to ro12/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro13/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro13/dffout (FF)
+  Destination:       ro13/dffout (FF)
+  Source Clock:      ro13/not_out<0> rising
+  Destination Clock: ro13/not_out<0> rising
+
+  Data Path: ro13/dffout to ro13/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro14/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro14/dffout (FF)
+  Destination:       ro14/dffout (FF)
+  Source Clock:      ro14/not_out<0> rising
+  Destination Clock: ro14/not_out<0> rising
+
+  Data Path: ro14/dffout to ro14/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro15/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro15/dffout (FF)
+  Destination:       ro15/dffout (FF)
+  Source Clock:      ro15/not_out<0> rising
+  Destination Clock: ro15/not_out<0> rising
+
+  Data Path: ro15/dffout to ro15/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ro16/not_out<0>'
+  Clock period: 1.386ns (frequency: 721.501MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            ro16/dffout (FF)
+  Destination:       ro16/dffout (FF)
+  Source Clock:      ro16/not_out<0> rising
+  Destination Clock: ro16/not_out<0> rising
+
+  Data Path: ro16/dffout to ro16/dffout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.341  dffout (dffout_OBUF)
+     INV:I->O              1   0.238   0.336  d1_INV_0 (d)
+     FDR:D                    -0.018          dffout
+    ----------------------------------------
+    Total                      1.386ns (0.709ns logic, 0.677ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Clock period: 6.118ns (frequency: 163.452MHz)
+  Total number of paths / destination ports: 4810 / 799
+-------------------------------------------------------------------------
+Delay:               6.118ns (Levels of Logic = 6)
+  Source:            ILA0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36 (RAM)
+  Destination:       ICON0/U0/U_ICON/U_TDO_reg (FF)
+  Source Clock:      ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+  Destination Clock: ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: ILA0/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36 to ICON0/U0/U_ICON/U_TDO_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB36_EXP:REGCLKAL->DOA0    1   2.180   0.973  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_data<10>)
+     LUT6:I1->O            1   0.094   0.973  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I5.U_MUX32/Mmux_O_91 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I5.U_MUX32/Mmux_O_91)
+     LUT6:I1->O            1   0.094   0.000  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I5.U_MUX32/Mmux_O_41 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I5.U_MUX32/Mmux_O_4)
+     MUXF7:I0->O           1   0.251   0.576  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I5.U_MUX32/Mmux_O_2_f7 (U0/I_YES_D.U_ILA/iDATA_DOUT)
+     LUT3:I1->O            1   0.094   0.789  U0/I_YES_D.U_ILA/U_DOUT (CONTROL<3>)
+     end scope: 'ILA0'
+     begin scope: 'ICON0'
+     LUT6:I2->O            1   0.094   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O2 (U0/U_ICON/iTDO_next)
+     FDE:D                    -0.018          U0/U_ICON/U_TDO_reg
+    ----------------------------------------
+    Total                      6.118ns (2.807ns logic, 3.311ns route)
+                                       (45.9% logic, 54.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ICON0/U0/iUPDATE_OUT'
+  Clock period: 1.392ns (frequency: 718.391MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.392ns (Levels of Logic = 1)
+  Source:            ICON0/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:       ICON0/U0/U_ICON/U_iDATA_CMD (FF)
+  Source Clock:      ICON0/U0/iUPDATE_OUT rising
+  Destination Clock: ICON0/U0/iUPDATE_OUT rising
+
+  Data Path: ICON0/U0/U_ICON/U_iDATA_CMD to ICON0/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.471   0.347  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
+     INV:I->O              1   0.238   0.336  U0/U_ICON/U_iDATA_CMD_n (U0/U_ICON/iDATA_CMD_n)
+     FDC:D                    -0.018          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      1.392ns (0.709ns logic, 0.683ns route)
+                                       (50.9% logic, 49.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 2.801ns (frequency: 357.015MHz)
+  Total number of paths / destination ports: 970 / 737
+-------------------------------------------------------------------------
+Delay:               2.801ns (Levels of Logic = 2)
+  Source:            ILA0/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD (FF)
+  Destination:       ILA0/U0/I_YES_D.U_ILA/U_RST/G_RST[0].U_RST (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: ILA0/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD to ILA0/U0/I_YES_D.U_ILA/U_RST/G_RST[0].U_RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.471   0.715  U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD (U0/I_YES_D.U_ILA/U_RST/HALT_pulse)
+     LUT3:I0->O            1   0.094   0.480  U0/I_YES_D.U_ILA/U_RST/U_PRST1 (U0/I_YES_D.U_ILA/U_RST/PRE_RESET1)
+     LUT4:I3->O            8   0.094   0.374  U0/I_YES_D.U_ILA/U_RST/U_PRST0 (U0/I_YES_D.U_ILA/U_RST/PRE_RESET0)
+     FDS:S                     0.573          U0/I_YES_D.U_ILA/U_RST/G_RST[0].U_RST
+    ----------------------------------------
+    Total                      2.801ns (1.232ns logic, 1.569ns route)
+                                       (44.0% logic, 56.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mux2_out'
+  Clock period: 2.072ns (frequency: 482.625MHz)
+  Total number of paths / destination ports: 78 / 12
+-------------------------------------------------------------------------
+Delay:               2.072ns (Levels of Logic = 13)
+  Source:            co2/out_0 (FF)
+  Destination:       co2/out_11 (FF)
+  Source Clock:      mux2_out rising
+  Destination Clock: mux2_out rising
+
+  Data Path: co2/out_0 to co2/out_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             8   0.471   0.374  co2/out_0 (co2/out_0)
+     INV:I->O              1   0.238   0.000  co2/Mcount_out_lut<0>_INV_0 (co2/Mcount_out_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  co2/Mcount_out_cy<0> (co2/Mcount_out_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  co2/Mcount_out_cy<1> (co2/Mcount_out_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  co2/Mcount_out_cy<2> (co2/Mcount_out_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  co2/Mcount_out_cy<3> (co2/Mcount_out_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  co2/Mcount_out_cy<4> (co2/Mcount_out_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  co2/Mcount_out_cy<5> (co2/Mcount_out_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  co2/Mcount_out_cy<6> (co2/Mcount_out_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  co2/Mcount_out_cy<7> (co2/Mcount_out_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  co2/Mcount_out_cy<8> (co2/Mcount_out_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  co2/Mcount_out_cy<9> (co2/Mcount_out_cy<9>)
+     MUXCY:CI->O           0   0.026   0.000  co2/Mcount_out_cy<10> (co2/Mcount_out_cy<10>)
+     XORCY:CI->O           1   0.357   0.000  co2/Mcount_out_xor<11> (Result<11>)
+     FDRE:D                   -0.018          co2/out_11
+    ----------------------------------------
+    Total                      2.072ns (1.698ns logic, 0.374ns route)
+                                       (81.9% logic, 18.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mux1_out'
+  Clock period: 2.072ns (frequency: 482.625MHz)
+  Total number of paths / destination ports: 78 / 12
+-------------------------------------------------------------------------
+Delay:               2.072ns (Levels of Logic = 13)
+  Source:            co1/out_0 (FF)
+  Destination:       co1/out_11 (FF)
+  Source Clock:      mux1_out rising
+  Destination Clock: mux1_out rising
+
+  Data Path: co1/out_0 to co1/out_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             8   0.471   0.374  co1/out_0 (co1/out_0)
+     INV:I->O              1   0.238   0.000  co1/Mcount_out_lut<0>_INV_0 (co1/Mcount_out_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  co1/Mcount_out_cy<0> (co1/Mcount_out_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  co1/Mcount_out_cy<1> (co1/Mcount_out_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  co1/Mcount_out_cy<2> (co1/Mcount_out_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  co1/Mcount_out_cy<3> (co1/Mcount_out_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  co1/Mcount_out_cy<4> (co1/Mcount_out_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  co1/Mcount_out_cy<5> (co1/Mcount_out_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  co1/Mcount_out_cy<6> (co1/Mcount_out_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  co1/Mcount_out_cy<7> (co1/Mcount_out_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  co1/Mcount_out_cy<8> (co1/Mcount_out_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  co1/Mcount_out_cy<9> (co1/Mcount_out_cy<9>)
+     MUXCY:CI->O           0   0.026   0.000  co1/Mcount_out_cy<10> (co1/Mcount_out_cy<10>)
+     XORCY:CI->O           1   0.357   0.000  co1/Mcount_out_xor<11> (Result<11>1)
+     FDRE:D                   -0.018          co1/out_11
+    ----------------------------------------
+    Total                      2.072ns (1.698ns logic, 0.374ns route)
+                                       (81.9% logic, 18.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Total number of paths / destination ports: 337 / 295
+-------------------------------------------------------------------------
+Offset:              5.336ns (Levels of Logic = 7)
+  Source:            ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
+  Destination:       VIO0/U0/I_VIO/U_STATUS/U_TDO (FF)
+  Destination Clock: ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to VIO0/U0/I_VIO/U_STATUS/U_TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_VIRTEX5:SHIFT    3   0.000   0.491  U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           64   0.094   0.922  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O           31   0.094   1.100  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_LCE (CONTROL0<5>)
+     end scope: 'ICON0'
+     begin scope: 'VIO0'
+     LUT5:I0->O            1   0.094   0.480  U0/I_VIO/U_STATUS/iSTAT_CNT<7>260_SW0 (N38)
+     LUT6:I5->O            1   0.094   0.710  U0/I_VIO/U_STATUS/iSTAT_CNT<7>260 (U0/I_VIO/U_STATUS/iSTAT_CNT<7>260)
+     LUT4:I1->O            1   0.094   1.069  U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O_5_f7_SW0 (N36)
+     LUT6:I0->O            1   0.094   0.000  U0/I_VIO/U_STATUS/iSTAT_CNT<7>316 (U0/I_VIO/U_STATUS/TDO_next)
+     FDE:D                    -0.018          U0/I_VIO/U_STATUS/U_TDO
+    ----------------------------------------
+    Total                      5.336ns (0.564ns logic, 4.772ns route)
+                                       (10.6% logic, 89.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mux2_out'
+  Total number of paths / destination ports: 24 / 1
+-------------------------------------------------------------------------
+Offset:              5.496ns (Levels of Logic = 9)
+  Source:            co2/out_1 (FF)
+  Destination:       puf_out (PAD)
+  Source Clock:      mux2_out rising
+
+  Data Path: co2/out_1 to puf_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             8   0.471   0.827  co2/out_1 (co2/out_1)
+     LUT4:I0->O            0   0.094   0.000  Mcompar_puf_out_cmp_gt0000_lutdi (Mcompar_puf_out_cmp_gt0000_lutdi)
+     MUXCY:DI->O           1   0.362   0.000  Mcompar_puf_out_cmp_gt0000_cy<0> (Mcompar_puf_out_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  Mcompar_puf_out_cmp_gt0000_cy<1> (Mcompar_puf_out_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  Mcompar_puf_out_cmp_gt0000_cy<2> (Mcompar_puf_out_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  Mcompar_puf_out_cmp_gt0000_cy<3> (Mcompar_puf_out_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  Mcompar_puf_out_cmp_gt0000_cy<4> (Mcompar_puf_out_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.254   0.336  Mcompar_puf_out_cmp_gt0000_cy<5> (Mcompar_puf_out_cmp_gt0000_cy<5>)
+     INV:I->O              5   0.238   0.358  Mcompar_puf_out_cmp_gt0000_cy<5>_inv1_INV_0 (puf_out_OBUF)
+     OBUF:I->O                 2.452          puf_out_OBUF (puf_out)
+    ----------------------------------------
+    Total                      5.496ns (3.975ns logic, 1.521ns route)
+                                       (72.3% logic, 27.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mux1_out'
+  Total number of paths / destination ports: 24 / 1
+-------------------------------------------------------------------------
+Offset:              5.506ns (Levels of Logic = 9)
+  Source:            co1/out_0 (FF)
+  Destination:       puf_out (PAD)
+  Source Clock:      mux1_out rising
+
+  Data Path: co1/out_0 to puf_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             8   0.471   0.827  co1/out_0 (co1/out_0)
+     LUT4:I0->O            1   0.094   0.000  Mcompar_puf_out_cmp_gt0000_lut<0> (Mcompar_puf_out_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  Mcompar_puf_out_cmp_gt0000_cy<0> (Mcompar_puf_out_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  Mcompar_puf_out_cmp_gt0000_cy<1> (Mcompar_puf_out_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  Mcompar_puf_out_cmp_gt0000_cy<2> (Mcompar_puf_out_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  Mcompar_puf_out_cmp_gt0000_cy<3> (Mcompar_puf_out_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  Mcompar_puf_out_cmp_gt0000_cy<4> (Mcompar_puf_out_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.254   0.336  Mcompar_puf_out_cmp_gt0000_cy<5> (Mcompar_puf_out_cmp_gt0000_cy<5>)
+     INV:I->O              5   0.238   0.358  Mcompar_puf_out_cmp_gt0000_cy<5>_inv1_INV_0 (puf_out_OBUF)
+     OBUF:I->O                 2.452          puf_out_OBUF (puf_out)
+    ----------------------------------------
+    Total                      5.506ns (3.985ns logic, 1.521ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.471ns (Levels of Logic = 0)
+  Source:            ICON0/U0/U_ICON/U_TDO_reg (FF)
+  Destination:       ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO (PAD)
+  Source Clock:      ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: ICON0/U0/U_ICON/U_TDO_reg to ICON0/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              0   0.471   0.000  U0/U_ICON/U_TDO_reg (U0/U_ICON/iTDO)
+    BSCAN_VIRTEX5:TDO          0.000          U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS
+    ----------------------------------------
+    Total                      0.471ns (0.471ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to ICON0.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to ICON0.
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to VIO0.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to VIO0.
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to ILA0.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to ILA0.
+
+
+Total REAL time to Xst completion: 27.00 secs
+Total CPU time to Xst completion: 27.47 secs
+ 
+--> 
+
+Total memory usage is 4632136 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   45 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

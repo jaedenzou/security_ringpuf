@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\Onur\Desktop\ise\ringpuf\ro.ncd
-OUTFILE=C:\Users\Onur\Desktop\ise\ringpuf\ro.bit
+INFILE=C:\Users\Jamal\OneDrive\Documents\Xilinx ISE Projects\security_ringpuf\ro.ncd
+OUTFILE=C:\Users\Jamal\OneDrive\Documents\Xilinx ISE Projects\security_ringpuf\ro.bit
 FAMILY=Virtex5
 PART=xc5vlx110t-1ff1136
-WORKINGDIR=C:\Users\Onur\Desktop\ise\ringpuf
+WORKINGDIR=C:\Users\Jamal\OneDrive\Documents\Xilinx ISE Projects\security_ringpuf
 LICENSE=ISE
-USER_INFO=174621394_1777526976_210661956_420
+USER_INFO=174621394_1777526976_210699534_260

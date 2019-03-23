@@ -1,0 +1,5 @@
+verilog isim_temp "ringoscillator.v"
+verilog isim_temp "Mux16.v"
+verilog isim_temp "counter.v"
+verilog isim_temp "rOsc_test.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

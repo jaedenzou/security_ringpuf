@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Jamal/OneDrive/Documents/Xilinx ISE Projects/security_ringpuf/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Jamal/OneDrive/Documents/Xilinx ISE Projects/security_ringpuf/xst"
+elaborate
+-ifn inv.prj
+-ifmt mixed

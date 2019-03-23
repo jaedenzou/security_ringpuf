@@ -1,0 +1,89 @@
+#:C29    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   C:\Users\Jamal\OneDrive\Documents\Xilinx ISE Projects\security_ringpuf
+#Date/Time:
+#:T   Fri Mar 22 13:42:13 2019
+#------------------------------
+	#Reading ro.ncd...
+	#Loading device for application Rf_Device from file '5vlx110t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "ro" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
+	#   "ringoscillator" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
+	#Design creation date: 2019.03.22.20.37.01
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k comp 'clock'
+	#3
+unselect -all
+	#4
+unselect -all
+	#5
+select site 'SLICE_X9Y65'
+	#site "SLICE_X9Y65",  type = SLICEL  (RPM grid X31Y130)
+	#6
+unselect -all
+	#7
+select hm 'ro1'
+	#Hard Macro Inst "ro1", type "ringoscillator", refcomp "ro1/not_out<3>"
+	#8
+unselect -all
+	#9
+select hm 'ro2'
+	#Hard Macro Inst "ro2", type "ringoscillator", refcomp "ro2/not_out<3>"
+	#10
+unselect -all
+	#11
+select rpm 'Shape_5'
+	#RPM Shape_5, type CARRY
+	#12
+unselect -all
+	#13
+select rpm 'ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET_MSET'
+	#RPM ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET_MSET, type RPM, refcomp "ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/U_MUXD/O"
+	#14
+unselect -all
+	#15
+select hm 'ro2'
+	#Hard Macro Inst "ro2", type "ringoscillator", refcomp "ro2/not_out<3>"
+	#16
+unselect -all
+	#17
+select rpm 'ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET_MSET'
+	#RPM ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET_MSET, type RPM, refcomp "ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V5.U_CS_GAND_SRL_V5/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/U_MUXD/O"
+	#18
+unselect -all
+	#19
+select comp 'mux2/Mmux__COND_2_5_f7'
+	#comp "mux2/Mmux__COND_2_5_f7",  site "SLICE_X12Y66",  type = SLICEL  (RPM grid X37Y132)
+	#20
+unselect -all
+	#21
+select comp 'mux1/Mmux__COND_2_5_f7'
+	#comp "mux1/Mmux__COND_2_5_f7",  site "SLICE_X13Y66",  type = SLICEL  (RPM grid X39Y132)
+	#22
+unselect -all
+	#23
+select comp 'ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<4>'
+	#comp "ILA0/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<4>",  site "SLICE_X13Y67",  type = SLICEL  (RPM grid X39Y134)
+	#24
+unselect -all
+	#25
+select comp 'ILA0/U0/I_YES_D.U_ILA/iCAP_WR_ADDR<11>'
+	#comp "ILA0/U0/I_YES_D.U_ILA/iCAP_WR_ADDR<11>",  site "SLICE_X13Y65",  type = SLICEL  (RPM grid X39Y130)
+	#26
+unselect -all
+	#27
+select hm 'ro7'
+	#Hard Macro Inst "ro7", type "ringoscillator", refcomp "ro7/not_out<3>"
+	#28
+unselect -all
+	#29
+select hm 'ro1'
+	#Hard Macro Inst "ro1", type "ringoscillator", refcomp "ro1/not_out<3>"
+	#30
+unselect -all

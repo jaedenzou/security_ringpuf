@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\zjc19\Desktop\Master files\18632 Assignment\ringpuf_student\ro_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/zjc19/Desktop/Master files/18632 Assignment/ringpuf_student/ro_isim_beh.wdb 
+Running: C:\Users\Jamal\OneDrive\Documents\Xilinx ISE Projects\security_ringpuf\ro_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Jamal/OneDrive/Documents/Xilinx ISE Projects/security_ringpuf/ro_test_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
 Time resolution is 1 ps

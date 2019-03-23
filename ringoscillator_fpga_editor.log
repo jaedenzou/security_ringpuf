@@ -1,0 +1,19 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   C:\Users\Jamal\OneDrive\Documents\Xilinx ISE Projects\security_ringpuf
+#Date/Time:
+#:T   Fri Mar 22 13:21:47 2019
+#------------------------------
+	#Reading C:\Users\Jamal\OneDrive\Documents\Xilinx ISE Projects\security_ringpuf\ringoscillator.nmc...
+	#Loading device for application Rf_Device from file '5vlx110t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "ringoscillator" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
+	#Design creation date: 2019.03.22.20.21.54
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+select -k comp 'dffout_OBUF'
+	#2
+unselect -all
