@@ -50,7 +50,7 @@ counter_12 co1(counter1_out, counter_enable , mux1_out, reset);
 counter_12 co2(counter2_out, counter_enable , mux2_out, reset);
 
 always @(*) begin
-puf_out = (counter1_out>=counter2_out) ? 1'b1:1'b0;
+puf_out = (counter1_out>counter2_out) ? 1'b1:1'b0;
 end
 
 
