@@ -7,12 +7,9 @@ module counter_12 (
 	reset       // reset input
 );
 	input enable, clk, reset;
-	output [11:0] out;
-	
-	reg [11:0] out;
-	
+	output reg [11:0] out;
 
-	always @(posedge clk) begin
+	always @(posedge clk or posedge reset) begin
 		if (reset) begin // active high reset
 			out <= 12'b0;
 		end

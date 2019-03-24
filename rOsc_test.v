@@ -66,22 +66,19 @@ module ro_test();
 	 
 	 //input clock;
 	 //output puf_out;
-
+	 
 	 //The input signals from VIO
 	 reg [3:0] select1, select2;
 	 reg enable, reset;
-	 reg clock;
-	 wire puf_out;
+	 reg clock, puf_out;
 	 
 	 //Mux signals
     wire out1, out2, out3, out4, out5, out6, out7, out8, 
 	 out9, out10, out11, out12, out13, out14, out15, out16, mux1_out, mux2_out;
 	 
 	 //Counter outputs
-	 wire [11:0] counter1_out, counter2_out; 
-	 wire [11:0] clockcounter_out;
+	 wire [11:0] counter1_out, counter2_out, clockcounter_out;
 	 wire counter_enable;
-	 
 	 
 //Instantiate your ring oscillators. Do not forget to add (* KEEP = "TRUE" *) before each instantiation
 //Example: (* KEEP = "TRUE" *)   ro_hardmacro ro1(enable, reset, out1);
@@ -108,13 +105,14 @@ Mux16 mux1(select1, {out16,out15,out14,out13,out12,out11,out10,out9,out8,out7,ou
 Mux16 mux2(select2, {out16,out15,out14,out13,out12,out11,out10,out9,out8,out7,out6,out5,out4,out3,out2,out1}, mux2_out);
 
 //Write the code for generating your PUF output
-counter_12 co_clk(.out(clockcounter_out), .enable(enable), .clk(clock), .reset(1'b0));
+clk_counter co_clk(clockcounter_out, enable , clock, reset);
 assign counter_enable = ~(clockcounter_out == 12'b111111111111);
 counter_12 co1(counter1_out, counter_enable , mux1_out, reset);
 counter_12 co2(counter2_out, counter_enable , mux2_out, reset);
 
-assign puf_out = (counter1_out>counter2_out) ? 1'b1:1'b0;
-
+always @(*) begin
+puf_out = (counter1_out>=counter2_out) ? 1'b1:1'b0;
+end
 /*
 	//////////////////////////////////////////////////////////////
 	//ICON, VIO, and ILA instantiations. No need to edit this part
@@ -156,7 +154,7 @@ assign puf_out = (counter1_out>counter2_out) ? 1'b1:1'b0;
 
 	initial begin
 		clock = 0;
-		#100;
+		#50;
 		forever begin
 			#0.5 clock = ~clock;
 		end
@@ -175,8 +173,11 @@ assign puf_out = (counter1_out>counter2_out) ? 1'b1:1'b0;
 		#10 enable = 1;
 		#10 reset = 0;
 		#5000;
+		#5000;
+		#5000;
+		#5000;
+		#5000;
 		//$finish;
-		
 	end
 	
 	

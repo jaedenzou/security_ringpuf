@@ -9,10 +9,10 @@ module ringoscillator(enable, reset, dffout);
 	 
    //Comment out the line below while implementing your design with hard macro
 	//(* S = "TRUE" *)
-	/*
+	
 	//Write the code for your ring oscillator
 	//Comment it out after you create the hard macro
-	
+	/*
 	genvar i;
 	(*KEEP = "TRUE"*) wire [10:0] not_out;
 	wire d_clk;
@@ -48,8 +48,8 @@ module ringoscillator(enable, reset, dffout);
 			dffout = d;
 		end
 	end
-	
 	*/
+	
 	
 
 	/////////////////////////////////////////

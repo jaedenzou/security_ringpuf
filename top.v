@@ -5,7 +5,7 @@ module ro(clock, puf_out);
 	 //Do not forget to make them wires before implementation
 	 
 	 input clock;
-	 output puf_out;
+	 output reg puf_out;
 
 	 //The input signals from VIO
 	 wire [3:0] select1, select2;
@@ -44,12 +44,16 @@ Mux16 mux1(select1, {out16,out15,out14,out13,out12,out11,out10,out9,out8,out7,ou
 Mux16 mux2(select2, {out16,out15,out14,out13,out12,out11,out10,out9,out8,out7,out6,out5,out4,out3,out2,out1}, mux2_out);
 
 //Write the code for generating your PUF output
-counter_12 co_clk(counterclock_out, enable , clock, 1'b0);
+clk_counter co_clk(clockcounter_out, enable , clock, reset);
 assign counter_enable = ~(clockcounter_out == 12'b111111111111);
 counter_12 co1(counter1_out, counter_enable , mux1_out, reset);
 counter_12 co2(counter2_out, counter_enable , mux2_out, reset);
 
-assign puf_out = (counter1_out>counter2_out) ? 1'b1:1'b0;
+always @(*) begin
+puf_out = (counter1_out>=counter2_out) ? 1'b1:1'b0;
+end
+
+
 	//////////////////////////////////////////////////////////////
 	//ICON, VIO, and ILA instantiations. No need to edit this part
 	 wire [9:0] vio_op;
